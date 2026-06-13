@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeArena - All AI Free | NextGen AI Nexus</title>
+  <style>
+    body{background:#0a0a0a;color:#fff;font-family:Arial,sans-serif;margin:0;padding:20px}
+    .header{text-align:center;padding:20px;border-bottom:1px solid #222}
+    .header h1{color:#00ff88;margin:0}
+    .chat-box{max-width:800px;margin:30px auto;background:#111;border:1px solid #222;border-radius:10px;padding:20px}
+    select,input,button{padding:12px;border-radius:5px;border:1px solid #333;background:#1a1a1a;color:#fff}
+    button{background:#00ff88;color:#000;cursor:pointer;font-weight:bold}
+    #messages{height:400px;overflow-y:auto;margin:20px 0;padding:10px;background:#0a0a0a;border-radius:5px}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🔥 FreeArena - All AI Free</h1>
+    <p>Gemini, Llama, Qwen - Sab Free | NextGen AI Nexus</p>
+  </div>
+  
+  <div class="chat-box">
+    <select id="model">
+      <option>Gemini 2.5 Flash - Google</option>
+      <option>Llama 3.1 8B - Meta</option>
+      <option>Qwen 2 7B - Alibaba</option>
+    </select>
+    
+    <div id="messages">
+      <p><b>AI:</b> Salam! FreeArena mein khush amdeed. Koi sawal poocho 👇</p>
+    </div>
+    
+    <input type="text" id="input" placeholder="Type your message..." style="width:70%">
+    <button onclick="send()" style="width:25%">Send</button>
+  </div>
+
+  <script>
+    function send(){
+      let input = document.getElementById('input');
+      let msg = input.value;
+      if(!msg) return;
+      document.getElementById('messages').innerHTML += `<p><b>You:</b> ${msg}</p>`;
+      document.getElementById('messages').innerHTML += `<p><b>AI:</b> API connect karte hi jawab aayega...</p>`;
+      input.value = '';
+    }
+  </script>
+</body>
+</html>
